@@ -104,12 +104,13 @@ const articleMaker = (someData) => {
   const bottomContent = document.createElement("p");
   const button = document.createElement("span");
 
+  article.classList.add("article");
   title.textContent = someData.title;
   date.textContent = someData.date;
   topContent.textContent = someData.firstParagraph;
   midContent.textContent = someData.secondParagraph;
   bottomContent.textContent = someData.thirdParagraph;
-  button.textContent = "+++++";
+  button.textContent = "+";
   button.classList.add("expandButton");
 
   article.appendChild(title);
@@ -124,7 +125,6 @@ const articleMaker = (someData) => {
   button.addEventListener("click", () => {
     console.log("clicked!!!!!");
     article.classList.toggle("article-open");
-    console.log(article);
   });
 
   return article;
